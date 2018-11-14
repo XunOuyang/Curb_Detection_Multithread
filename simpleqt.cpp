@@ -66,23 +66,23 @@ SimpleQt::~SimpleQt()
 
 void SimpleQt::createActions()
 {
-    m_playAct = new QAction(QIcon("C:/Users/csav4/Desktop/SimpleQt/SimpleQt/Resources/media_play.ico"), tr("&Play"), this);
+    m_playAct = new QAction(QIcon("../SimpleQt/Resources/media_play.ico"), tr("&Play"), this);
     m_playAct->setStatusTip(tr("Turn on image streaming"));
     m_playAct->setCheckable(true);
     connect(m_playAct, SIGNAL(triggered()), this, SLOT(onPlay()));
 
-    m_stopAct = new QAction(QIcon("C:/Users/csav4/Desktop/SimpleQt/SimpleQt/Resources/media_stop.ico"), tr("&Stop"), this);
+    m_stopAct = new QAction(QIcon("../SimpleQt/Resources/media_stop.ico"), tr("&Stop"), this);
     m_stopAct->setStatusTip(tr("Turn off image streaming"));
     m_stopAct->setCheckable(true);
     connect(m_stopAct, SIGNAL(triggered()), this, SLOT(onStop()));
 
 
-	m_startRecord = new QAction(QIcon("C:/Users/csav4/Desktop/SimpleQt/SimpleQt/Resources/start_record.ico"), tr("&Start_Record"), this);
+	m_startRecord = new QAction(QIcon("../SimpleQt/Resources/start_record.ico"), tr("&Start_Record"), this);
 	m_startRecord->setStatusTip(tr("Turn on image rerocding"));
 	m_startRecord->setCheckable(true);
 	connect(m_startRecord, SIGNAL(triggered()), this, SLOT(startRecord()));
 
-	m_stopRecord = new QAction(QIcon("C:/Users/csav4/Desktop/SimpleQt/SimpleQt/Resources/stop_record.ico"), tr("&Stop_Record"), this);
+	m_stopRecord = new QAction(QIcon("../SimpleQt/Resources/stop_record.ico"), tr("&Stop_Record"), this);
 	m_stopRecord->setStatusTip(tr("Turn off image recording"));
 	m_stopRecord->setCheckable(true);
 	connect(m_stopRecord, SIGNAL(triggered()), this, SLOT(stopRecord()));
